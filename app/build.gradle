@@ -39,6 +39,13 @@ dependencies {
     androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.2.0'
 }
 
+// steps
+// 1: in app level build.gradle, add     buildTypes {
+//        debug {
+//            testCoverageEnabled = true
+//        }
+// 2: from terminal, run ./gradlew createDebugCoverageReport
+// 3: from path app/build/reports/coverage, if you don't see .html file, but .ec file, add & run following gradlew task ./gradlew jacocoTestReport
 apply plugin: 'jacoco'
 
 def coverageSourceDirs = [
